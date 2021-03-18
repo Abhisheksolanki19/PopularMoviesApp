@@ -2,16 +2,17 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="80dp"
+    android:layout_height="30dp"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="#000000">
+    app:cardBackgroundColor="@color/colorPrimary">
 
     <TextView
         android:id="@+id/trailer_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#03A9F4"
-        android:textSize="18sp"
-        tools:text="Trailer 1" />
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_Trailer"
+        tools:text="@string/Trailer_Value" />
 </androidx.cardview.widget.CardView>

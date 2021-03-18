@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Popular Movies</string>
+    <string name="internetError">Check Your Internet Connection</string>
+    <string name="MovieName">Movies Name here</string>
+    <string name="ReleaseDate">Release Date Here</string>
+    <string name="OverView">Movie Overview Here</string>
+    <string name="WatchTrailer">Watch Trailer</string>
+    <string name="PeopleReviews">People Reviews</string>
+    <string name="Fav_Layout_Movie_Name">Movie Name</string>
+    <string name="Fav_Rating">Rating Here</string>
+    <string name="Fav_Release_Date">Release Date Here</string>
+    <string name="Fav_Movie_Description">Movie Description</string>
+    <string name="Main_Movie_Name">Movie Name Here</string>
+    <string name="Main_Rating">Rating:</string>
+    <string name="Rating_value">Rating_value</string>
+    <string name="Author_Name">Author Name</string>
+    <string name="Author_Review">Author Review</string>
+    <string name="Trailer_Value">Trailer Value</string>
+    <string name="play_icon">Play Icon</string>
+    <string name="trailer_thumbnail">Trailer Thumbnail</string>
 </resources>

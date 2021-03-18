@@ -2,26 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:showDividers="beginning"
+    android:elevation="4dp"
+    android:background="@drawable/shadow_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
 
     <TextView
         android:id="@+id/author_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#6F6D67"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_margin="@dimen/Layout_margin"
+        android:textSize="@dimen/Author_Name_text_size"
         android:textStyle="bold"
-        tools:text="Author Name" />
+        tools:text="@string/Author_Name" />
 
     <TextView
         android:id="@+id/review_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#C8E6C9"
-        android:textSize="16sp"
+        android:textColor="@color/LightBlack"
+        android:layout_margin="@dimen/Layout_margin"
+        android:textSize="@dimen/text_size_Small"
         android:layout_marginBottom="30dp"
-        tools:text="Ad Astra galactically depicts sorrow, proving that no one can hear you cry in space. " />
+        tools:text="@string/Author_Review" />
 
 
 </LinearLayout>

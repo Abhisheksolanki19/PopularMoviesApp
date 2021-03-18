@@ -1,4 +1,4 @@
-package com.example.popularmoviesapp.Adapters;
+package com.merchpandas.moviesapp.allAdapters;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -12,16 +12,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.popularmoviesapp.R;
+import com.merchpandas.moviesapp.R;
 
 import java.util.ArrayList;
 
-public class MovieVideoAdapter extends RecyclerView.Adapter<MovieVideoAdapter.VideoViewHolder> {
+public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
     private ArrayList<String> movieLinkList;
     private Context mContext;
 
-    public MovieVideoAdapter(ArrayList<String> movieLinkList, Context context) {
+    public VideoAdapter(ArrayList<String> movieLinkList, Context context) {
         this.movieLinkList = movieLinkList;
         mContext = context;
     }
@@ -29,7 +29,7 @@ public class MovieVideoAdapter extends RecyclerView.Adapter<MovieVideoAdapter.Vi
     @NonNull
     @Override
     public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.trailor_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.teaser, parent, false);
         return new VideoViewHolder(view);
     }
 
@@ -67,9 +67,5 @@ public class MovieVideoAdapter extends RecyclerView.Adapter<MovieVideoAdapter.Vi
 
 
         }
-    }
-
-    {
-
     }
 }

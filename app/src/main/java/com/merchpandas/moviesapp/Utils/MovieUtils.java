@@ -1,9 +1,9 @@
-package com.example.popularmoviesapp.Utility;
+package com.merchpandas.moviesapp.Utils;
 
 import android.util.Log;
 
-import com.example.popularmoviesapp.Objects.MovieDetails;
-import com.example.popularmoviesapp.Objects.MovieReview;
+import com.merchpandas.moviesapp.POJO.Moviespojo;
+import com.merchpandas.moviesapp.POJO.Reviewpojo;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,11 +23,10 @@ public class MovieUtils {
     private static String LOG_ERROR = "MovieUtilsClass-Error";
     private static String LOG_OUTPUT = "MovieUtilsClass-Output";
 
-    //Call directly by class name
     private MovieUtils() {
     }
 
-    public static ArrayList<MovieReview> fetchMovieReview(String requestUrl) {
+    public static ArrayList<Reviewpojo> fetchMovieReview(String requestUrl) {
         URL url = createUrl(requestUrl);
 
         String jsonResponse = null;
@@ -37,7 +36,7 @@ public class MovieUtils {
             Log.e(LOG_ERROR, "Problem making the HTTP request.", e);
         }
 
-        ArrayList<MovieReview> MovieData = fetchMovieReviewFromJson(jsonResponse);
+        ArrayList<Reviewpojo> MovieData = fetchMovieReviewFromJson(jsonResponse);
         return MovieData;
 
     }
@@ -57,7 +56,7 @@ public class MovieUtils {
 
     }
 
-    public static ArrayList<MovieDetails> fetchMovieDetails(String requestUrl) {
+    public static ArrayList<Moviespojo> fetchMovieDetails(String requestUrl) {
         URL url = createUrl(requestUrl);
 
         String jsonResponse = null;
@@ -67,7 +66,7 @@ public class MovieUtils {
             Log.e(LOG_ERROR, "Problem making the HTTP request.", e);
         }
 
-        ArrayList<MovieDetails> MovieData = fetchMovieDataFromJson(jsonResponse);
+        ArrayList<Moviespojo> MovieData = fetchMovieDataFromJson(jsonResponse);
         return MovieData;
 
     }
@@ -137,8 +136,8 @@ public class MovieUtils {
     }
 
     //All details of Movie
-    public static ArrayList<MovieDetails> fetchMovieDataFromJson(String movieJson) {
-        ArrayList<MovieDetails> arrayList = new ArrayList<>();
+    public static ArrayList<Moviespojo> fetchMovieDataFromJson(String movieJson) {
+        ArrayList<Moviespojo> arrayList = new ArrayList<>();
         try {
             JSONObject baseJsonObject = new JSONObject(movieJson);
             JSONArray jsonArray = baseJsonObject.getJSONArray("results");
@@ -152,7 +151,7 @@ public class MovieUtils {
                 String image = jsonObject.getString("poster_path");
                 String id = jsonObject.getString("id");
 
-                MovieDetails movieDetails = new MovieDetails(title, date, rating, overview, image, id);
+                Moviespojo movieDetails = new Moviespojo(title, date, rating, overview, image, id);
                 arrayList.add(movieDetails);
 
             }
@@ -190,8 +189,8 @@ public class MovieUtils {
     }
 
     //All Review of Movie
-    public static ArrayList<MovieReview> fetchMovieReviewFromJson(String movieJson) {
-        ArrayList<MovieReview> arrayList = new ArrayList<>();
+    public static ArrayList<Reviewpojo> fetchMovieReviewFromJson(String movieJson) {
+        ArrayList<Reviewpojo> arrayList = new ArrayList<>();
         try {
             JSONObject baseJsonObject = new JSONObject(movieJson);
             JSONArray jsonArray = baseJsonObject.getJSONArray("results");
@@ -200,7 +199,7 @@ public class MovieUtils {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 String author = jsonObject.getString("author");
                 String content = jsonObject.getString("content");
-                MovieReview movieReview = new MovieReview(author, content);
+                Reviewpojo movieReview = new Reviewpojo(author, content);
 
                 arrayList.add(movieReview);
 

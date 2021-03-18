@@ -1,11 +1,11 @@
-package com.example.popularmoviesapp.Objects;
+package com.merchpandas.moviesapp.POJO;
 
-public class MovieReview {
+public class Reviewpojo {
 
     private String mReviewAuthor;
     private String mReviewDetail;
 
-    public MovieReview(String reviewAuthor, String reviewDetail) {
+    public Reviewpojo(String reviewAuthor, String reviewDetail) {
         mReviewAuthor = reviewAuthor;
         mReviewDetail = reviewDetail;
     }

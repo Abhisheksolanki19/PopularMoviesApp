@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".MovieDetailActivity">
 
@@ -28,14 +28,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="280dp"
                     android:adjustViewBounds="true"
-                    android:scaleType="fitCenter" />
+                    android:scaleType="centerCrop" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="16dp"
+                    android:background="@android:color/white"
                     android:orientation="vertical">
 
 
@@ -43,9 +41,10 @@
                         android:id="@+id/title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Deadpool 2"
-                        android:textColor="#FFFFFF"
-                        android:textSize="28sp" />
+                        android:layout_margin="@dimen/Layout_margin"
+                        android:text="@string/MovieName"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -56,8 +55,9 @@
                             android:id="@+id/rating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rating:7.2"
-                            android:textColor="#FFCA28"
+                            android:layout_margin="@dimen/Layout_margin"
+                            android:text="@string/Main_Rating"
+                            android:textColor="@color/colorRating"
                             android:textSize="16sp" />
 
                         <TextView
@@ -67,8 +67,9 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:gravity="bottom"
-                            android:text="Release Date: 2008-07-16"
-                            android:textColor="#6F6D67"
+                            android:layout_margin="@dimen/Layout_margin"
+                            android:text="@string/ReleaseDate"
+                            android:textColor="@color/LightBlack"
                             android:textSize="12sp" />
 
 
@@ -79,10 +80,11 @@
                         android:id="@+id/overView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:paddingBottom="16dp"
-                        android:text="Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
-                        android:textColor="#6F6D67"
+                        android:layout_margin="4dp"
+                        android:layout_marginTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/OverView"
+                        android:textColor="@color/LightBlack"
                         android:textSize="20sp" />
 
                     <RelativeLayout
@@ -93,15 +95,15 @@
                             android:layout_width="100dp"
                             android:layout_height="1dp"
                             android:layout_centerVertical="true"
-                            android:background="#FFFFFF" />
+                            android:background="@android:color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginTop="8dp"
-                            android:text="Watch Trailer"
-                            android:textColor="#FFFFFF"
+                            android:text="@string/WatchTrailer"
+                            android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
                         <View
@@ -109,7 +111,7 @@
                             android:layout_height="1dp"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
-                            android:background="#FFFFFF" />
+                            android:background="@android:color/black" />
 
                     </RelativeLayout>
 
@@ -135,19 +137,19 @@
                         <View
                             android:layout_width="100dp"
                             android:layout_height="1dp"
-                            android:background="#FFFFFF" />
+                            android:background="@android:color/black" />
 
                         <View
                             android:layout_width="100dp"
                             android:layout_height="1dp"
                             android:layout_centerInParent="true"
-                            android:background="#FFFFFF" />
+                            android:background="@android:color/black" />
 
                         <View
                             android:layout_width="100dp"
                             android:layout_height="1dp"
                             android:layout_alignParentEnd="true"
-                            android:background="#FFFFFF" />
+                            android:background="@android:color/black" />
 
                     </RelativeLayout>
 
@@ -157,8 +159,8 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
                         android:gravity="center"
-                        android:text="People Reviews"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/PeopleReviews"
+                        android:textColor="@android:color/black"
                         android:textSize="24sp" />
 
                     <ImageView
@@ -182,14 +184,15 @@
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/set_favourite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/set_favourite"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_gravity="bottom|right"
-            android:layout_marginRight="16dp"
-            android:src="@android:drawable/btn_star" />
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_favorite"
+            app:backgroundTint="@color/colorPrimary" />
 
     </RelativeLayout>
 

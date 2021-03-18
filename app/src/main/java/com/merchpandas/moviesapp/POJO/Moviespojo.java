@@ -1,7 +1,7 @@
-package com.example.popularmoviesapp.Objects;
+package com.merchpandas.moviesapp.POJO;
 
 
-public class MovieDetails {
+public class Moviespojo {
 
     private String mMovieTitle;
     private String mMovieRatings;
@@ -10,7 +10,7 @@ public class MovieDetails {
     private String mMovieSynopsis;
     private String mMovieId;
 
-    public MovieDetails(String movieTitle, String movieDate, String movieRatings, String movieSynopsis, String movieImage, String movieId) {
+    public Moviespojo(String movieTitle, String movieDate, String movieRatings, String movieSynopsis, String movieImage, String movieId) {
         mMovieDate = movieDate;
         mMovieImage = movieImage;
         mMovieRatings = movieRatings;

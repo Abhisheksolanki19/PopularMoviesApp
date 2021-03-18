@@ -1,4 +1,4 @@
-package com.example.popularmoviesapp;
+package com.merchpandas.moviesapp;
 
 import org.junit.Test;
 

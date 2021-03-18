@@ -1,4 +1,4 @@
-package com.example.popularmoviesapp;
+package com.merchpandas.moviesapp;
 
 import android.content.Context;
 

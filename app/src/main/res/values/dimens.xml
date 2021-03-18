@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">28sp</dimen>
+    <dimen name="text_size_Small">14sp</dimen>
+    <dimen name="text_size_Trailer">14sp</dimen>
+    <dimen name="Author_Name_text_size">20sp</dimen>
+    <dimen name="Release_Date_text_size_small">10sp</dimen>
+    <dimen name="Padding_Small">2dp</dimen>
+    <dimen name="Release_Date_text_size">12sp</dimen>
+    <dimen name="Main_screen_Layout_margin">12dp</dimen>
+    <dimen name="Layout_margin">4dp</dimen>
+</resources>

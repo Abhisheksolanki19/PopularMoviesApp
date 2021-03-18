@@ -1,54 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="180dp"
+    android:layout_width="200dp"
     android:layout_height="290dp"
-    android:layout_margin="4dp"
-    android:background="#FF000000"
+    android:background="@android:color/black"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FF000000"
+        android:padding="@dimen/Padding_Small"
+        android:background="@android:color/black"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/movie_image"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:scaleType="centerInside" />
+            android:scaleType="centerCrop" />
 
-        <TextView
-            android:id="@+id/movie_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/roboto_mono_bold"
-            android:maxLines="2"
-            android:text="Deadpool- 2"
-
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textStyle="bold" />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rating: "
-                android:textColor="#FFEE58"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/movie_rating"
+                android:id="@+id/movie_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="6.2"
-                android:textColor="#FFEE58"
-                android:textSize="10sp" />
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_mono_bold"
+                android:maxLines="2"
+                android:text="@string/Main_Movie_Name"
+                android:paddingStart="4dp"
+                android:paddingEnd="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_Small"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Main_Rating"
+                    android:textColor="@color/colorRating"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="@dimen/Release_Date_text_size_small" />
+
+                <TextView
+                    android:id="@+id/movie_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rating_value"
+                    android:textColor="@color/colorRating"
+                    android:textSize="@dimen/Release_Date_text_size_small" />
+            </LinearLayout>
 
 
         </LinearLayout>

@@ -8,9 +8,9 @@
         android:id="@+id/favourite_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deadpool 2"
-        android:textColor="#FFFFFF"
-        android:textSize="28sp" />
+        android:text="@string/Fav_Layout_Movie_Name"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,9 +21,9 @@
             android:id="@+id/favourite_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rating:7.2"
-            android:textColor="#FFCA28"
-            android:textSize="16sp" />
+            android:text="@string/Fav_Rating"
+            android:textColor="@color/colorRating"
+            android:textSize="@dimen/text_size_Small" />
 
         <TextView
             android:id="@+id/favourite_date"
@@ -32,9 +32,10 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:gravity="bottom"
-            android:text="Release Date: 2008-07-16"
-            android:textColor="#6F6D67"
-            android:textSize="12sp" />
+            android:layout_margin="@dimen/Layout_margin"
+            android:text="@string/Fav_Release_Date"
+            android:textColor="@color/LightBlack"
+            android:textSize="@dimen/Release_Date_text_size" />
 
 
     </RelativeLayout>
@@ -46,9 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker."
-        android:textColor="#6F6D67"
-        android:textSize="12sp" />
+        android:maxLines="5"
+        android:text="@string/Fav_Movie_Description"
+        android:textColor="@color/LightBlack"
+        android:textSize="@dimen/text_size_Small" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
 
 
 </LinearLayout>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,9 +10,9 @@
         class="androidx.recyclerview.widget.RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recycler_view"
-        android:layout_margin="16dp"
-        android:background="#000000">
+        android:id="@+id/recyclerView"
+        android:layout_margin="@dimen/Main_screen_Layout_margin"
+        android:background="@android:color/black">
 
     </view>
 
@@ -29,8 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Check Your Internet Connecction"
-        android:textColor="#FFFFFF"
+        android:text="@string/internetError"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:visibility="invisible" />
 

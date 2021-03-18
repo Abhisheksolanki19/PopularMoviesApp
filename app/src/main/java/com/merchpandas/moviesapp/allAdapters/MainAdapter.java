@@ -1,4 +1,4 @@
-package com.example.popularmoviesapp.Adapters;
+package com.merchpandas.moviesapp.allAdapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,20 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.popularmoviesapp.MovieDetailActivity;
-import com.example.popularmoviesapp.Objects.MovieDetails;
-import com.example.popularmoviesapp.R;
+import com.merchpandas.moviesapp.MovieDetailActivity;
+import com.merchpandas.moviesapp.POJO.Moviespojo;
+import com.merchpandas.moviesapp.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 
-public class MovieDetailRecyclerViewAdapter extends RecyclerView.Adapter<MovieDetailRecyclerViewAdapter.MyViewHolder> {
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<MovieDetails> mMovieDetailsList;
+    private List<Moviespojo> mMovieDetailsList;
 
-    public MovieDetailRecyclerViewAdapter(Context context, List<MovieDetails> movieDetailsList) {
+    public MainAdapter(Context context, List<Moviespojo> movieDetailsList) {
         mContext = context;
         mMovieDetailsList = movieDetailsList;
     }
@@ -52,7 +52,7 @@ public class MovieDetailRecyclerViewAdapter extends RecyclerView.Adapter<MovieDe
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, MovieDetailActivity.class);
-                MovieDetails movieDetails = mMovieDetailsList.get(position);
+                Moviespojo movieDetails = mMovieDetailsList.get(position);
 
                 intent.putExtra("title", movieDetails.getMovieTitle());
                 intent.putExtra("rating", movieDetails.getMovieRatings());
